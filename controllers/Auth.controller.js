@@ -1,6 +1,7 @@
 import User from "../models/User.model.js";
 import bcrypt from "bcryptjs";
 import { createError } from "../middlewares/Error.middleware.js";
+import jwt from "jsonwebtoken";
 
 export const signup = async (req, res, next) => {
   try {
@@ -28,7 +29,7 @@ export const signin = async (req, res, next) => {
 
     if (!isCorrect) return next(createError(400, "Wrong Credentials!"));
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT);
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
     const { password, ...others } = user._doc;
 
     res
