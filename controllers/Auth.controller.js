@@ -33,7 +33,7 @@ export const signin = async (req, res, next) => {
     const { password, ...others } = user._doc;
 
     res
-      .cookie("access_token", token, {
+      .cookie("access_token_youtube", token, {
         httpOnly: true,
       })
       .status(200)
