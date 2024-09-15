@@ -16,7 +16,7 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t whoshriyansh/youtube_clone_server:latest .
+        run: docker build -t whoshriyansh/youtube_clone_server:latest
 
       - name: Push Docker Image
         run: docker push whoshriyansh/youtube_clone_server:latest
