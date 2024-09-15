@@ -8,6 +8,7 @@ RUN npm install
 
 COPY . .
 
+# Stage 2: Set up the runtime environment
 FROM node:16.20.1
 
 WORKDIR /app
