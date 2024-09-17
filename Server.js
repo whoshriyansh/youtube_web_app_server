@@ -13,9 +13,22 @@ dotenv.config();
 
 const app = express();
 
+// const allowedOrigins = ["http://localhost:3000", "http://3.109.155.238:3000"];
+// {
+//   origin: function (origin, callback) {
+//     if (allowedOrigins.includes(origin)) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   },
+//   methods: "GET,POST,PUT,DELETE",
+//   credentials: true,
+// }
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL,
+    origin: "*",
     credentials: true,
   })
 );
