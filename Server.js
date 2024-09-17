@@ -28,7 +28,8 @@ const app = express();
 
 app.use(
   cors({
-    origin: "*",
+    origin: "http://3.109.155.238:3000",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
