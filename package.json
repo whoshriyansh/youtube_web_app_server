@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "Server.js",
   "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "nodemon Server.js",
     "start": "node Server.js"
